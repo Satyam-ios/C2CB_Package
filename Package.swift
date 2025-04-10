@@ -12,14 +12,14 @@ let package = Package(
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "C2CB_iOS_Library",
-            targets: ["C2CB_iOS_Library"]),
+            targets: ["C2CB_iOS_Library_Package"]),
     ],
     dependencies: [
             .package(url: "https://github.com/twilio/twilio-voice-ios", from: "6.13.0")
         ],
     targets: [
         .target(
-                name: "C2CB_iOS_Library",
+                name: "C2CB_iOS_Library_Package",
                 dependencies: [
                     "twilio-voice-ios",
                     "C2CB_iOS_Library"
