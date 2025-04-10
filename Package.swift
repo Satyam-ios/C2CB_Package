@@ -14,7 +14,7 @@ let package = Package(
     targets: [
            .binaryTarget(
                name: "C2CB_iOS_Library",
-               path: "./C2CB_iOS_Library.xcframework"
+               path: "C2CB_iOS_Library.xcframework"
            )
        ]
 )
