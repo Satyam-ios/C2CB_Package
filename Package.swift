@@ -18,15 +18,14 @@ let package = Package(
         .package(url: "https://github.com/twilio/twilio-voice-ios", from: "6.13.0")
     ],
     targets: [
-        // Wrapper target to expose both TwilioVoice and your xcframework
         .target(
             name: "C2CB_iOS_LibraryWrapper",
             dependencies: [
-                "twilio-voice-ios",
+                // Use the product name from the dependency
+                .product(name: "TwilioVoice", package: "twilio-voice-ios"),
                 "C2CB_iOS_Library"
             ]
         ),
-        // Your binary framework
         .binaryTarget(
             name: "C2CB_iOS_Library",
             path: "./C2CB_iOS_Library.xcframework"

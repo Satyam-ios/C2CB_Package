@@ -8,3 +8,9 @@
 
 
 
+import Foundation
+import TwilioVoice
+
+public class EmptyFile {
+    // Use TwilioVoice functions here
+}
